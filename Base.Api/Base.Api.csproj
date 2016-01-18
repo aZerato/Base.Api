@@ -213,8 +213,18 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Configuration.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Api.Crosscutting.Core\Base.Api.Crosscutting.Core.csproj">
+      <Project>{63d223b7-8a33-4d7e-9e62-153675211848}</Project>
+      <Name>Base.Api.Crosscutting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.Api.Crosscutting.Ioc\Base.Api.Crosscutting.Ioc.csproj">
+      <Project>{c4608328-f8ab-48cd-a565-1320ce5285b0}</Project>
+      <Name>Base.Api.Crosscutting.Ioc</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
