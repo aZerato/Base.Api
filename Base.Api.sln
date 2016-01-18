@@ -5,6 +5,16 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api", "Base.Api\Base.Api.csproj", "{D1BB6240-553D-4221-90BA-051A1F0A11EB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{4F2F1BC2-C2F2-4CED-90D2-A5BBD81C75B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Tools", "0 - Tools", "{5B4FC019-873B-445D-BA3A-57AAA3D181BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{6C9756CA-72A1-44BE-AED9-56533647079F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{A7FCE75B-8242-4316-8BE7-CC5F06D65634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Crosscutting", "5 - Crosscutting", "{CDE3CB9F-3AF6-4E33-B806-B1AF10DC4D3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +28,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D1BB6240-553D-4221-90BA-051A1F0A11EB} = {4F2F1BC2-C2F2-4CED-90D2-A5BBD81C75B8}
 	EndGlobalSection
 EndGlobal
