@@ -1,2 +1,2 @@
 # Base.Api
-Base RestFul API like Amazon WS Authentication logic
+Base RESTFul API with Amazon WS Authentication logic like
