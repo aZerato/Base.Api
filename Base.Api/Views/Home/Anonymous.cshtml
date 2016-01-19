@@ -1,0 +1,31 @@
+﻿<div class="jumbotron">
+    <h1>Anonymous request</h1>
+</div>
+
+<div class="form-values">
+    <button id="validate">Valider</button>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+
+<script>
+    $(document).ready(function () {
+        var $form = $('.form-values');
+        var $btn = $form.find('#validate');
+
+        $btn.bind('click', function () {
+            var verb = 'DELETE';
+            var url = '/api/Values/1';
+
+            $.ajax({
+                method: verb,
+                url: url,
+            }).done(function (data) {
+                alert('Authorized');
+                $form.append(data);
+            }).fail(function () {
+                alert('not authorized');
+            });
+        });
+    });
+</script>

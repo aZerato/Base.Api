@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-namespace Base.Api.Controllers
+﻿namespace Base.Api.Controllers
 {
+    using CustomAttributes;
+    using System.Collections.Generic;
+    using System.Web.Http;
+
+    [CustomAuthorizationAttribute]
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -31,6 +29,7 @@ namespace Base.Api.Controllers
         {
         }
 
+        [AllowAnonymous]
         // DELETE api/values/5
         public void Delete(int id)
         {

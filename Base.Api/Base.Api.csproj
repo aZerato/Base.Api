@@ -122,7 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -157,11 +156,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="ContentNegotiators\JsonContentNegotiator.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="CustomAttributes\CustomAuthorizationAttribute.cs" />
+    <Compile Include="Filters\ApiExceptionFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\ApiExceptionHandler.cs" />
+    <Compile Include="Models\ApiErrorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +218,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Configuration.cshtml" />
+    <Content Include="Views\Home\Sample.cshtml" />
+    <Content Include="Views\Home\Anonymous.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Base.Api.Crosscutting.Core\Base.Api.Crosscutting.Core.csproj">
@@ -223,6 +229,10 @@
     <ProjectReference Include="..\Base.Api.Crosscutting.Ioc\Base.Api.Crosscutting.Ioc.csproj">
       <Project>{c4608328-f8ab-48cd-a565-1320ce5285b0}</Project>
       <Name>Base.Api.Crosscutting.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.Api.Data.Managers.Interfaces\Base.Api.Data.Managers.Interfaces.csproj">
+      <Project>{8709be65-7d5d-4e85-b59a-3edd285e691c}</Project>
+      <Name>Base.Api.Data.Managers.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

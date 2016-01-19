@@ -37,6 +37,20 @@
             return View();
         }
 
+        public ActionResult Sample()
+        {
+            this.ViewBag.Title = "Sample Page";
+
+            return View();
+        }
+
+        public ActionResult Anonymous()
+        {
+            this.ViewBag.Title = "Sample Anonymous Page";
+
+            return View();
+        }
+
         /// <summary>
         /// Configuration action : return api configuration.
         /// </summary>
@@ -45,9 +59,10 @@
         {
             ViewBag.Title = "Configuration Page";
 
-            this.ViewBag.WebSErvicesName = this.settingsApi.ApplicationSettings.GlobalSettings.WebServicesName;
+            this.ViewBag.WebServicesName = this.settingsApi.ApplicationSettings.GlobalSettings.WebServicesName;
             this.ViewBag.PrefixHeaderKey = this.settingsApi.ApplicationSettings.GlobalSettings.PrefixHeaderKey;
             this.ViewBag.RequestTimeValidity = this.settingsApi.ApplicationSettings.GlobalSettings.RequestTimeValidity;
+            this.ViewBag.ValueRequestSeparator = this.settingsApi.ApplicationSettings.GlobalSettings.ValueRequestSeparator;
             this.ViewBag.MaxResultsReturn = this.settingsApi.ApplicationSettings.GlobalSettings.MaxResultsReturn;
 
             return View();

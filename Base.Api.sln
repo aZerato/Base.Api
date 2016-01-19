@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api.Crosscutting.Core"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api.Data.Settings", "Base.Api.Data.Settings\Base.Api.Data.Settings.csproj", "{2E26C97E-717E-41D4-B0F7-65A655B511ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api.Data.Managers.Interfaces", "Base.Api.Data.Managers.Interfaces\Base.Api.Data.Managers.Interfaces.csproj", "{8709BE65-7D5D-4E85-B59A-3EDD285E691C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api.Data.Managers", "Base.Api.Data.Managers\Base.Api.Data.Managers.csproj", "{5E5FFF3C-7F90-478B-9AA1-0970311CEE90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{2E26C97E-717E-41D4-B0F7-65A655B511ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E26C97E-717E-41D4-B0F7-65A655B511ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E26C97E-717E-41D4-B0F7-65A655B511ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8709BE65-7D5D-4E85-B59A-3EDD285E691C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8709BE65-7D5D-4E85-B59A-3EDD285E691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8709BE65-7D5D-4E85-B59A-3EDD285E691C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8709BE65-7D5D-4E85-B59A-3EDD285E691C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E5FFF3C-7F90-478B-9AA1-0970311CEE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5FFF3C-7F90-478B-9AA1-0970311CEE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E5FFF3C-7F90-478B-9AA1-0970311CEE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E5FFF3C-7F90-478B-9AA1-0970311CEE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +64,7 @@ Global
 		{C4608328-F8AB-48CD-A565-1320CE5285B0} = {CDE3CB9F-3AF6-4E33-B806-B1AF10DC4D3E}
 		{63D223B7-8A33-4D7E-9E62-153675211848} = {CDE3CB9F-3AF6-4E33-B806-B1AF10DC4D3E}
 		{2E26C97E-717E-41D4-B0F7-65A655B511ED} = {A7FCE75B-8242-4316-8BE7-CC5F06D65634}
+		{8709BE65-7D5D-4E85-B59A-3EDD285E691C} = {A7FCE75B-8242-4316-8BE7-CC5F06D65634}
+		{5E5FFF3C-7F90-478B-9AA1-0970311CEE90} = {A7FCE75B-8242-4316-8BE7-CC5F06D65634}
 	EndGlobalSection
 EndGlobal

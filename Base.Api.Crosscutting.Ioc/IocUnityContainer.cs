@@ -2,6 +2,7 @@
 {
     using Core.Configuration;
     using Core.IoC;
+    using Data.Managers.Interfaces;
     using Microsoft.Practices.Unity;
     using System;
     using System.Collections.Generic;
@@ -35,9 +36,9 @@
         private static ContainerScope currentScope;
 
         /// <summary>
-        /// Settings provider lifetime manager.
+        /// Settings api lifetime manager.
         /// </summary>
-        private static ContainerControlledLifetimeManager settingsProviderLifetimeManager;
+        private static ContainerControlledLifetimeManager settingsApiLifetimeManager;
 
         /// <summary>
         /// Logger lifetime manager.
@@ -54,7 +55,7 @@
         static IocUnityContainer()
         {
             containerScopes = new Dictionary<ContainerScope, IUnityContainer>();
-            settingsProviderLifetimeManager = new ContainerControlledLifetimeManager();
+            settingsApiLifetimeManager = new ContainerControlledLifetimeManager();
             loggerLifetimeManager = new ContainerControlledLifetimeManager();
             instance = new IocUnityContainer();
         }
@@ -166,7 +167,7 @@
                 }
 
                 loggerLifetimeManager.Dispose();
-                settingsProviderLifetimeManager.Dispose();
+                settingsApiLifetimeManager.Dispose();
             }
         }
 
@@ -196,8 +197,10 @@
         private static void ConfigureRootContainer(IUnityContainer container)
         {
             // Register crosscuting mappings
-            container.RegisterType<ISettingsApi, Data.Settings.SettingsApi>(settingsProviderLifetimeManager);
-
+            container.RegisterType<ISettingsApi, Data.Settings.SettingsApi>(settingsApiLifetimeManager);
+            
+            // Register managers
+            container.RegisterType<ICryptoAuthorizeManager, Data.Managers.CryptoAuthorizeManager>(new TransientLifetimeManager());
         }
         #endregion privates
     }
