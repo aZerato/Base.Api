@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63D223B7-8A33-4D7E-9E62-153675211848}</ProjectGuid>
+    <ProjectGuid>{8709BE65-7D5D-4E85-B59A-3EDD285E691C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Base.Api.Crosscutting.Core</RootNamespace>
-    <AssemblyName>Base.Api.Crosscutting.Core</AssemblyName>
+    <RootNamespace>Base.Api.Data.Managers.Interfaces</RootNamespace>
+    <AssemblyName>Base.Api.Data.Managers.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,16 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\ISettingsApi.cs" />
-    <Compile Include="Configuration\Settings\IGlobalSettings.cs" />
-    <Compile Include="Configuration\Settings\IApplicationSettings.cs" />
-    <Compile Include="Exceptions\IApiException.cs" />
-    <Compile Include="Exceptions\Types\RequestParameterException.cs" />
-    <Compile Include="Exceptions\Types\RequestTimeException.cs" />
-    <Compile Include="Exceptions\Types\ResponseStatusCodeException.cs" />
-    <Compile Include="Exceptions\Types\UnknowUserException.cs" />
-    <Compile Include="IoC\ContainerScope.cs" />
-    <Compile Include="IoC\IContainer.cs" />
+    <Compile Include="ICryptoAuthorizeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

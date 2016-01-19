@@ -21,5 +21,10 @@
         /// Gets the Max results return value.
         /// </summary>
         string MaxResultsReturn { get; }
+
+        /// <summary>
+        /// Gets the string/char value used for separate sts values.
+        /// </summary>
+        string ValueRequestSeparator { get; }
     }
 }

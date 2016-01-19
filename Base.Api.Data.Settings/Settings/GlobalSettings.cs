@@ -30,6 +30,11 @@
         /// </summary>
         private const string MaxResultsReturnPropertyName = "maxResultsReturn";
 
+        /// <summary>
+        /// Value request separator return property name.
+        /// </summary>
+        private const string ValueRequestSeparatorPropertyName = "valueRequestSeparator";
+
         #endregion properties
 
         #region attributes
@@ -57,6 +62,12 @@
         /// </summary>
         [ConfigurationProperty(MaxResultsReturnPropertyName)]
         public string MaxResultsReturn { get { return this[MaxResultsReturnPropertyName] as string; } }
+
+        /// <summary>
+        /// Gets the string/char value used for separate sts values.
+        /// </summary>
+        [ConfigurationProperty(ValueRequestSeparatorPropertyName)]
+        public string ValueRequestSeparator { get { return this[ValueRequestSeparatorPropertyName] as string; } }
 
         #endregion attributes
     }

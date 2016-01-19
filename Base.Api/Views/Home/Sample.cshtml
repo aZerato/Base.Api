@@ -1,0 +1,115 @@
+﻿<div class="jumbotron">
+    <h1>Encryption</h1>
+</div>
+
+<div class="form-values">
+    <label for="applicationkey">Application key</label>
+    <br />
+    <input type="text" id="applicationkey" value="AccessKey" />
+    <br />
+    <label for="secretkey">Secret Access key</label>
+    <br />
+    <input type="text" id="secretkey" value="SecretKey" />
+    <br />
+    <button id="validate">Valider</button>
+</div>
+
+<div class="jumbotron jumbotron-results" style="display: none;">
+    <h1>Results</h1>
+    <div class="results">
+
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var $form = $('.form-values');
+        var $btn = $form.find('#validate');
+        var $jumbotronResults = $('.jumbotron-results');
+        var $results = $jumbotronResults.find('.results');
+
+        var $applicationKey = $form.find('#applicationkey');
+        var $secretKey = $form.find('#secretkey');
+
+        var rsaPublicKey = $form.find('#rsapublicKey').text();
+
+        $form.bind('keypress', function (e) {
+            if (e.which == 13) {
+                $btn.click();
+            }
+        });
+
+        $btn.bind('click', function () {
+            $results.html('')
+            $jumbotronResults.hide();
+
+            var applicationKey = $applicationKey.val();
+            var secretKey = $secretKey.val();
+
+            var timestamp = new Date().getTime();
+
+            var authorizationHeader = "WS " + applicationKey + ":";
+
+            var verb = 'GET';
+            var url = '/api/Values';
+            var contentTypeHeader = 'application/json; charset=utf-8';
+
+            var canonicalized = 'x-ws-timestamp:' + timestamp;
+
+
+            var stringToSign = GenerateStringToSign(verb, contentTypeHeader, canonicalized);
+
+            // generate signature
+            var signature = GenerateSignature(applicationKey, secretKey, stringToSign);
+
+            authorizationHeader += signature;
+
+            $.ajax({
+                method: verb,
+                url: url,
+                headers: {
+                    'Accept': 'application/json', // need to set for custom attributes in FF
+                    'Authorization': authorizationHeader,
+                    'Content-Type': contentTypeHeader,
+                    'X-Ws-timestamp': timestamp
+                },
+                contentType: contentTypeHeader,
+                data: '{}',
+                dataType: 'json'
+            }).done(function (data) {
+                alert('Authorized');
+                for (var i = 0; i < data.length; i++)
+                {
+                    $results.append(data[i] + "<br />");
+                }
+                $jumbotronResults.show();
+            }).fail(function () {
+                alert('not authorized');
+            });
+        });
+    });
+
+    var GenerateStringToSign = function (verb, contentType, canonicalized)
+    {
+        var sts = verb + "\n" +
+                contentType + "\n" +
+                canonicalized;
+
+        return sts;
+    };
+
+    var GenerateSignature = function (applicationkey, secretKey, stringToSign)
+    {
+        var hash = CryptoJS.HmacSHA1(stringToSign, secretKey);
+
+        var base64 = CryptoJS.enc.Base64.stringify(hash);
+
+        return base64;
+    };
+</script>
