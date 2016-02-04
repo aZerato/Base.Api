@@ -24,7 +24,7 @@
 
         public CustomAuthorizationAttribute()
         {
-            this.cryptoAuthorizeManager = IocUnityContainer.Instance.Resolve<ICryptoAuthorizeManager>();
+            this.cryptoAuthorizeManager = CustomUnityContainer.Instance.Resolve<ICryptoAuthorizeManager>();
         }
 
         #endregion constructor

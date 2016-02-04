@@ -19,7 +19,7 @@
 
         public HomeController()
         {
-            this.settingsApi = IocUnityContainer.Instance.Resolve<ISettingsApi>();
+            this.settingsApi = CustomUnityContainer.Instance.Resolve<ISettingsApi>();
         }
 
         #endregion constructors
