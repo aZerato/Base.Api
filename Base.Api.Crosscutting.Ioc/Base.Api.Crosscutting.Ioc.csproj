@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IocUnityContainer.cs" />
+    <Compile Include="CustomUnityContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +67,10 @@
     <ProjectReference Include="..\Base.Api.Crosscutting.Core\Base.Api.Crosscutting.Core.csproj">
       <Project>{63d223b7-8a33-4d7e-9e62-153675211848}</Project>
       <Name>Base.Api.Crosscutting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base.Api.Crosscutting.Interfaces\Base.Api.Crosscutting.Interfaces.csproj">
+      <Project>{7744c0e1-7aea-43e3-b02c-a6534822ba7c}</Project>
+      <Name>Base.Api.Crosscutting.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Base.Api.Data.Managers.Interfaces\Base.Api.Data.Managers.Interfaces.csproj">
       <Project>{8709be65-7d5d-4e85-b59a-3edd285e691c}</Project>
