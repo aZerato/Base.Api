@@ -9,9 +9,9 @@
     using System;
 
     /// <summary>
-    /// Custom IoC implementation.
+    /// Custom IoC implementation Singleton Pattern.
     /// </summary>
-    public class CustomUnityContainer : ICustomUnityContainer
+    public sealed class CustomUnityContainer : ICustomUnityContainer
     {
         #region properties
 
