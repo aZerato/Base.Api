@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api.Data.Managers", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Api.Crosscutting.Interfaces", "Base.Api.Crosscutting.Interfaces\Base.Api.Crosscutting.Interfaces.csproj", "{7744C0E1-7AEA-43E3-B02C-A6534822BA7C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{080E7A7B-C4FE-4022-BAA4-CC476A68BE82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
