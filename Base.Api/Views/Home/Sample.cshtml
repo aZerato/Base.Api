@@ -23,9 +23,9 @@
 
 @Scripts.Render("~/bundles/jquery")
 
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha1.js"></script>
 
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -97,8 +97,8 @@
 
     var GenerateStringToSign = function (verb, contentType, canonicalized)
     {
-        var sts = verb + "\n" +
-                contentType + "\n" +
+        var sts = verb + "|" +
+                contentType + "|" +
                 canonicalized;
 
         return sts;

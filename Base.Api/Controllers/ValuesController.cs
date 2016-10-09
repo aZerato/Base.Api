@@ -31,8 +31,9 @@
 
         [AllowAnonymous]
         // DELETE api/values/5
-        public void Delete(int id)
+        public string Delete(int id)
         {
+            return "deleted";
         }
     }
 }

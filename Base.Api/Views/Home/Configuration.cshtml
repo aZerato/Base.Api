@@ -1,22 +1,17 @@
-﻿<div class="jumbotron">
-    <h1>Api Configuration</h1>
-    <p class="lead">Configuration values from configuration file.</p>
+<div class="jumbotron">
+    <h1>How to configure ?</h1>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>Keys</h2>
-        <p>webServicesName</p>
-        <p>prefixHeaderKey</p>
-        <p>requestTimeValidity</p>
-        <p>valueRequestSeparator</p>
-        <p>maxResultsReturn</p>
-    </div>
-    <div class="col-md-4">
-        <h2>Values</h2>
-        <p>@this.ViewBag.WebServicesName</p>
-        <p>@this.ViewBag.PrefixHeaderKey</p>
-        <p>@this.ViewBag.RequestTimeValidity</p>
-        <p>@this.ViewBag.ValueRequestSeparator</p>
-        <p>@this.ViewBag.MaxResultsReturn</p>
+    <div class="col-md-6">
+        <h2>How it work ?</h2>
+        <blockquote>
+            Like the authentication system for Amazon Web Service
+        </blockquote>
+        <p>
+            Each user has a Public and Secret keys, only the user and the web services know those keys.
+        </p>
+        <p>
+            For each request the user need to send a specific header for be authenticated by the web services.
+        </p>
     </div>
 </div>
