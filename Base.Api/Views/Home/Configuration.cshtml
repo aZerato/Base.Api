@@ -3,8 +3,39 @@
 </div>
 <div class="row">
     <div class="col-md-6">
-        <table>
-
+        <p>
+            Take a look to the "baseApiConfiguration" section of the web.config for configure your API
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">webServicesName</th>
+                    <td>WS</td>
+                    <td>It's the first element of "Authorization" header.</td>
+                </tr>
+                <tr>
+                    <th scope="row">prefixHeaderKey</th>
+                    <td>x-ws-</td>
+                    <td>The prefix of each custom attributes added to header.</td>
+                </tr>
+                <tr>
+                    <th scope="row">valueRequestSeparator</th>
+                    <td>|</td>
+                    <td>The separator used for the signature creation.</td>
+                </tr>
+                <tr>
+                    <th scope="row">requestTimeValidity</th>
+                    <td>300</td>
+                    <td>The request time validity in ms.</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>

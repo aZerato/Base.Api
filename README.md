@@ -14,6 +14,13 @@ You are able to configure each request composants in the web.config (request dur
 
 Each parameters are configurables, take a look to the [web.config](https://github.com/aZerato/Base.Api/blob/master/Base.Api/Web.config).
 
+Key Header | Description
+---------- | -----------
+webServicesName | It's the first element of "Authorization" header
+prefixHeaderKey | The prefix of each custom attributes added to header
+valueRequestSeparator | The separator used for the signature creation
+requestTimeValidity | The request time validity in ms
+
 ## Licence
 
 MIT
