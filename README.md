@@ -1,10 +1,13 @@
 # Base.Api
 
 Sample STATELESS API ASP .NET
+- MVC REST
+- Unity for dependency injection
+- the [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design) software dev approach
  
-> Amazon WS Authentication logic like
-
 ## How it work ?
+
+> Amazon WS Authentication logic like
 
 [Amazon Rest Authentication](http://docs.aws.amazon.com/AmazonS3/latest/dev/RESTAuthentication.html)
 
@@ -19,7 +22,7 @@ Key Header | Description
 webServicesName | It's the first element of "Authorization" header
 prefixHeaderKey | The prefix of each custom attributes added to header
 valueRequestSeparator | The separator used for the signature creation
-requestTimeValidity | The request time validity in ms
+requestTimeValidity | The request validity time in ms
 
 ## Licence
 
