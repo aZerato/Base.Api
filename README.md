@@ -13,6 +13,8 @@ Sample STATELESS API ASP .NET
 
 This is a sample, the Public Key & Secret Key are in code (maybe a database for the next) !
 
+[The custom authorization attribute class](https://github.com/aZerato/Base.Api/blob/master/Base.Api/CustomAttributes/CustomAuthorizationAttribute.cs)
+
 You are able to configure each request composants in the web.config (request duration, the WS name, the request signature separator, ...).
 
 Each parameters are configurables, take a look to the [web.config](https://github.com/aZerato/Base.Api/blob/master/Base.Api/Web.config).
